@@ -1,0 +1,300 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6254" systemVersion="14B25" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="vXZ-lx-hvc">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6247"/>
+        <capability name="Alignment constraints with different attributes" minToolsVersion="5.1"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="ufC-wZ-h7g">
+            <objects>
+                <viewController id="vXZ-lx-hvc" customClass="ViewController" customModule="Howl" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="jyV-Pf-zRb"/>
+                        <viewControllerLayoutGuide type="bottom" id="2fi-mo-0CV"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="kh9-bI-dsS">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" showsUserLocation="YES" translatesAutoresizingMaskIntoConstraints="NO" id="AHY-dc-a2K">
+                                <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
+                                <color key="backgroundColor" red="0.43529411759999997" green="0.4431372549" blue="0.47450980390000003" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="tintColor" cocoaTouchSystemColor="darkTextColor"/>
+                            </mapView>
+                            <visualEffectView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="zC1-3J-ucF">
+                                <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
+                                <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="3ze-Ma-LUC">
+                                    <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
+                                    <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                    <subviews>
+                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="UTA-S1-Lc3">
+                                            <rect key="frame" x="-23" y="-15" width="46" height="30"/>
+                                            <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                                            <fontDescription key="fontDescription" style="UICTFontTextStyleHeadline"/>
+                                            <state key="normal" title="DROP A POINT TO HOWL">
+                                                <color key="titleColor" red="0.031985646324481642" green="0.84129686613754151" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                                <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                            </state>
+                                            <connections>
+                                                <action selector="howlButtonTouchUpInside:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="t9f-Cg-LbB"/>
+                                                <segue destination="gHJ-Ik-EZe" kind="show" identifier="sendLocation" id="IC2-8p-ae1"/>
+                                            </connections>
+                                        </button>
+                                    </subviews>
+                                    <constraints>
+                                        <constraint firstItem="UTA-S1-Lc3" firstAttribute="top" secondItem="3ze-Ma-LUC" secondAttribute="top" constant="15" id="4C4-af-CcC"/>
+                                        <constraint firstItem="UTA-S1-Lc3" firstAttribute="centerX" secondItem="3ze-Ma-LUC" secondAttribute="centerX" id="6Wx-GK-JoN"/>
+                                        <constraint firstItem="UTA-S1-Lc3" firstAttribute="centerY" secondItem="3ze-Ma-LUC" secondAttribute="centerY" id="UWq-SD-0RA"/>
+                                        <constraint firstItem="UTA-S1-Lc3" firstAttribute="leading" secondItem="3ze-Ma-LUC" secondAttribute="leading" constant="35" id="ZoU-8L-GUU"/>
+                                    </constraints>
+                                    <variation key="default">
+                                        <mask key="subviews">
+                                            <exclude reference="UTA-S1-Lc3"/>
+                                        </mask>
+                                        <mask key="constraints">
+                                            <exclude reference="4C4-af-CcC"/>
+                                            <exclude reference="6Wx-GK-JoN"/>
+                                            <exclude reference="UWq-SD-0RA"/>
+                                            <exclude reference="ZoU-8L-GUU"/>
+                                        </mask>
+                                    </variation>
+                                    <variation key="widthClass=compact">
+                                        <mask key="subviews">
+                                            <include reference="UTA-S1-Lc3"/>
+                                        </mask>
+                                        <mask key="constraints">
+                                            <include reference="4C4-af-CcC"/>
+                                            <include reference="6Wx-GK-JoN"/>
+                                            <include reference="UWq-SD-0RA"/>
+                                            <include reference="ZoU-8L-GUU"/>
+                                        </mask>
+                                    </variation>
+                                </view>
+                                <color key="backgroundColor" red="0.35072732922239169" green="0.52523415376171878" blue="0.58347143308080807" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="96" id="jqR-7c-Vb6"/>
+                                </constraints>
+                                <blurEffect style="light"/>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="jqR-7c-Vb6"/>
+                                    </mask>
+                                </variation>
+                                <variation key="widthClass=compact">
+                                    <mask key="constraints">
+                                        <include reference="jqR-7c-Vb6"/>
+                                    </mask>
+                                </variation>
+                            </visualEffectView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="zC1-3J-ucF" secondAttribute="trailing" id="8jE-zM-3ed"/>
+                            <constraint firstItem="zC1-3J-ucF" firstAttribute="top" secondItem="AHY-dc-a2K" secondAttribute="bottom" constant="1" id="Eqc-MZ-N3l"/>
+                            <constraint firstItem="zC1-3J-ucF" firstAttribute="bottom" secondItem="2fi-mo-0CV" secondAttribute="top" id="KQf-l1-J9W"/>
+                            <constraint firstItem="AHY-dc-a2K" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leadingMargin" constant="-44" id="R2l-0K-qjZ"/>
+                            <constraint firstItem="zC1-3J-ucF" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leading" id="R2z-bE-miK"/>
+                            <constraint firstItem="AHY-dc-a2K" firstAttribute="top" secondItem="kh9-bI-dsS" secondAttribute="topMargin" constant="-74" id="YJU-Cz-sM3"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="AHY-dc-a2K" secondAttribute="trailing" constant="-23" id="dXK-Jv-IBV"/>
+                        </constraints>
+                        <variation key="default">
+                            <mask key="subviews">
+                                <exclude reference="AHY-dc-a2K"/>
+                                <exclude reference="zC1-3J-ucF"/>
+                            </mask>
+                            <mask key="constraints">
+                                <exclude reference="R2l-0K-qjZ"/>
+                                <exclude reference="YJU-Cz-sM3"/>
+                                <exclude reference="dXK-Jv-IBV"/>
+                                <exclude reference="8jE-zM-3ed"/>
+                                <exclude reference="Eqc-MZ-N3l"/>
+                                <exclude reference="KQf-l1-J9W"/>
+                                <exclude reference="R2z-bE-miK"/>
+                            </mask>
+                        </variation>
+                        <variation key="widthClass=compact">
+                            <mask key="subviews">
+                                <include reference="AHY-dc-a2K"/>
+                                <include reference="zC1-3J-ucF"/>
+                            </mask>
+                            <mask key="constraints">
+                                <include reference="R2l-0K-qjZ"/>
+                                <include reference="YJU-Cz-sM3"/>
+                                <include reference="dXK-Jv-IBV"/>
+                                <include reference="8jE-zM-3ed"/>
+                                <include reference="Eqc-MZ-N3l"/>
+                                <include reference="KQf-l1-J9W"/>
+                                <include reference="R2z-bE-miK"/>
+                            </mask>
+                        </variation>
+                    </view>
+                    <connections>
+                        <outlet property="MapView" destination="AHY-dc-a2K" id="7WT-0Q-Qpe"/>
+                        <outlet property="howlButton" destination="UTA-S1-Lc3" id="Jyo-rw-ydl"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="244.5" y="305"/>
+        </scene>
+        <!--Howl View Controller-->
+        <scene sceneID="dxG-3n-Oul">
+            <objects>
+                <viewController id="gHJ-Ik-EZe" customClass="HowlViewController" customModule="Howl" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="4YY-jn-0ef"/>
+                        <viewControllerLayoutGuide type="bottom" id="EED-zE-Au8"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="y9s-D3-2kC">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Howl" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="D5A-gB-wjv">
+                                <rect key="frame" x="0.0" y="-21" width="42" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yLE-6b-4Em">
+                                <rect key="frame" x="-23" y="-15" width="46" height="30"/>
+                                <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="55" id="eq1-Eg-tZo"/>
+                                </constraints>
+                                <state key="normal" title="Submit Howl">
+                                    <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                        <integer key="value" value="5"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="eq1-Eg-tZo"/>
+                                    </mask>
+                                </variation>
+                                <variation key="widthClass=compact">
+                                    <mask key="constraints">
+                                        <include reference="eq1-Eg-tZo"/>
+                                    </mask>
+                                </variation>
+                                <connections>
+                                    <action selector="howlWasPressed:" destination="gHJ-Ik-EZe" eventType="touchUpInside" id="i5E-zV-eHv"/>
+                                    <segue destination="T16-kj-4gy" kind="unwind" unwindAction="unwindToViewController:" id="l4N-82-X7H"/>
+                                </connections>
+                            </button>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="q4E-S1-3ZL">
+                                <rect key="frame" x="0.0" y="-30" width="97" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="MtG-Nh-dWd">
+                                <rect key="frame" x="0.0" y="-30" width="97" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Howl Title" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PEB-MT-3QM">
+                                <rect key="frame" x="0.0" y="-21" width="42" height="21"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="23" id="UlL-bv-XBE"/>
+                                    <constraint firstAttribute="width" constant="108" id="zun-wk-5iW"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="UlL-bv-XBE"/>
+                                        <exclude reference="zun-wk-5iW"/>
+                                    </mask>
+                                </variation>
+                                <variation key="widthClass=compact">
+                                    <mask key="constraints">
+                                        <include reference="UlL-bv-XBE"/>
+                                        <include reference="zun-wk-5iW"/>
+                                    </mask>
+                                </variation>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" red="0.76131136570908398" green="0.46290590198948034" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstItem="MtG-Nh-dWd" firstAttribute="top" secondItem="PEB-MT-3QM" secondAttribute="bottom" constant="18" id="1G0-XU-NfG"/>
+                            <constraint firstItem="q4E-S1-3ZL" firstAttribute="top" secondItem="D5A-gB-wjv" secondAttribute="bottom" constant="18" id="3Yp-Pd-mi5"/>
+                            <constraint firstItem="yLE-6b-4Em" firstAttribute="leading" secondItem="y9s-D3-2kC" secondAttribute="leading" id="GVx-g7-gJ2"/>
+                            <constraint firstItem="PEB-MT-3QM" firstAttribute="centerX" secondItem="MtG-Nh-dWd" secondAttribute="centerX" id="Gf0-wz-dNj"/>
+                            <constraint firstItem="EED-zE-Au8" firstAttribute="top" secondItem="yLE-6b-4Em" secondAttribute="bottom" constant="182" id="Hx9-lO-gtu"/>
+                            <constraint firstItem="PEB-MT-3QM" firstAttribute="top" secondItem="4YY-jn-0ef" secondAttribute="bottom" constant="8" symbolic="YES" id="IWS-Ge-ik8"/>
+                            <constraint firstItem="yLE-6b-4Em" firstAttribute="centerX" secondItem="q4E-S1-3ZL" secondAttribute="centerX" id="Sge-07-7XZ"/>
+                            <constraint firstItem="MtG-Nh-dWd" firstAttribute="leading" secondItem="q4E-S1-3ZL" secondAttribute="leading" id="dLo-Wj-5hH"/>
+                            <constraint firstItem="MtG-Nh-dWd" firstAttribute="trailing" secondItem="q4E-S1-3ZL" secondAttribute="trailing" id="fUS-gW-EnF"/>
+                            <constraint firstItem="D5A-gB-wjv" firstAttribute="centerX" secondItem="q4E-S1-3ZL" secondAttribute="centerX" id="gbO-e4-cBy"/>
+                            <constraint firstAttribute="trailing" secondItem="yLE-6b-4Em" secondAttribute="trailing" id="giS-yf-PnD"/>
+                            <constraint firstItem="MtG-Nh-dWd" firstAttribute="leading" secondItem="y9s-D3-2kC" secondAttribute="leadingMargin" constant="-4" id="jXf-3o-XeM"/>
+                            <constraint firstItem="D5A-gB-wjv" firstAttribute="top" secondItem="MtG-Nh-dWd" secondAttribute="bottom" constant="19" id="xec-rb-7qt"/>
+                        </constraints>
+                        <variation key="default">
+                            <mask key="subviews">
+                                <exclude reference="D5A-gB-wjv"/>
+                                <exclude reference="yLE-6b-4Em"/>
+                                <exclude reference="q4E-S1-3ZL"/>
+                                <exclude reference="MtG-Nh-dWd"/>
+                                <exclude reference="PEB-MT-3QM"/>
+                            </mask>
+                            <mask key="constraints">
+                                <exclude reference="1G0-XU-NfG"/>
+                                <exclude reference="dLo-Wj-5hH"/>
+                                <exclude reference="fUS-gW-EnF"/>
+                                <exclude reference="jXf-3o-XeM"/>
+                                <exclude reference="Gf0-wz-dNj"/>
+                                <exclude reference="IWS-Ge-ik8"/>
+                                <exclude reference="3Yp-Pd-mi5"/>
+                                <exclude reference="gbO-e4-cBy"/>
+                                <exclude reference="xec-rb-7qt"/>
+                                <exclude reference="GVx-g7-gJ2"/>
+                                <exclude reference="Sge-07-7XZ"/>
+                                <exclude reference="giS-yf-PnD"/>
+                                <exclude reference="Hx9-lO-gtu"/>
+                            </mask>
+                        </variation>
+                        <variation key="widthClass=compact">
+                            <mask key="subviews">
+                                <include reference="D5A-gB-wjv"/>
+                                <include reference="yLE-6b-4Em"/>
+                                <include reference="q4E-S1-3ZL"/>
+                                <include reference="MtG-Nh-dWd"/>
+                                <include reference="PEB-MT-3QM"/>
+                            </mask>
+                            <mask key="constraints">
+                                <include reference="1G0-XU-NfG"/>
+                                <include reference="dLo-Wj-5hH"/>
+                                <include reference="fUS-gW-EnF"/>
+                                <include reference="jXf-3o-XeM"/>
+                                <include reference="Gf0-wz-dNj"/>
+                                <include reference="IWS-Ge-ik8"/>
+                                <include reference="3Yp-Pd-mi5"/>
+                                <include reference="gbO-e4-cBy"/>
+                                <include reference="xec-rb-7qt"/>
+                                <include reference="GVx-g7-gJ2"/>
+                                <include reference="Sge-07-7XZ"/>
+                                <include reference="giS-yf-PnD"/>
+                                <include reference="Hx9-lO-gtu"/>
+                            </mask>
+                        </variation>
+                    </view>
+                    <connections>
+                        <outlet property="howlTextField" destination="q4E-S1-3ZL" id="J3f-nM-PYg"/>
+                        <outlet property="howlTitleTextField" destination="MtG-Nh-dWd" id="dk9-wo-X70"/>
+                        <outlet property="view" destination="y9s-D3-2kC" id="kC0-DX-HLh"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="4HZ-Hs-8Tg" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <exit id="T16-kj-4gy" userLabel="Exit" sceneMemberID="exit"/>
+            </objects>
+            <point key="canvasLocation" x="1171.5" y="47"/>
+        </scene>
+    </scenes>
+</document>
